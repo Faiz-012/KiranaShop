@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CustomerController;
+use App\Http\Controllers\Api\CustomerLedgerController;
 use App\Http\Controllers\Api\ItemController;
 use App\Http\Controllers\Api\PurchaseController;
 use App\Http\Controllers\Api\SaleController;
@@ -27,4 +28,5 @@ Route::resource('supplier', SupplierController::class);
 Route::resource('customer', CustomerController::class);
 Route::resource('purchase', PurchaseController::class);
 Route::resource('sale', SaleController::class);
+Route::resource('customerledger', CustomerLedgerController::class);
 
