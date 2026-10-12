@@ -4,10 +4,12 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CustomerController;
 use App\Http\Controllers\Api\CustomerLedgerController;
+use App\Http\Controllers\Api\DashbordController;
 use App\Http\Controllers\Api\ItemController;
 use App\Http\Controllers\Api\PurchaseController;
 use App\Http\Controllers\Api\SaleController;
 use App\Http\Controllers\Api\SupplierController;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,5 +30,6 @@ Route::resource('supplier', SupplierController::class);
 Route::resource('customer', CustomerController::class);
 Route::resource('purchase', PurchaseController::class);
 Route::resource('sale', SaleController::class);
-Route::resource('customerledger', CustomerLedgerController::class);
-
+Route::resource('customerledger',CustomerLedgerController::class);
+Route::get('/dashboard', [DashbordController::class, 'index']);
+                            
